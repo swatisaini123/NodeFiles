@@ -15,7 +15,7 @@ const axios = require('axios');
 process.env.PWD = process.env.PWD || process.cwd();
 
 var expressApp = express();
-var port = process.env.PORT || 3002;
+var port = process.env.PORT || 3000;
 
 console.log('test::'+process.env.myname);
 expressApp.set('port', port);
@@ -84,9 +84,6 @@ expressApp.get('/fetch-zoho-details', async (req, res) => {
   }
 });
 
-expressApp.listen(port, () => {
-  console.log(`Server is running on http://localhost:${port}`);
-});
 https.createServer(options, expressApp).listen(port, function () {
   console.log(chalk.green('Zet running at ht' + 'tps://127.0.0.1:' + port));
   console.log(chalk.bold.cyan("Note: Please enable the host (https://127.0.0.1:"+port+") in a new tab and authorize the connection by clicking Advanced->Proceed to 127.0.0.1 (unsafe)."));
