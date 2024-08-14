@@ -15,7 +15,7 @@ const axios = require('axios');
 process.env.PWD = process.env.PWD || process.cwd();
 
 var expressApp = express();
-var port = process.env.PORT || 50000;
+var port = process.env.PORT || 3002;
 
 console.log('test::'+process.env.myname);
 expressApp.set('port', port);
